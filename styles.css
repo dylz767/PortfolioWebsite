@@ -34,6 +34,13 @@ h2 {
     margin: 0 auto; /* Centers the image */
 }
 
+#contact {
+    display: none;
+}
+.navbar {
+    transition: top 0.3s;
+}
+
 #about {
     text-align: center;
 }
