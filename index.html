@@ -35,7 +35,7 @@
     <section id="about" class="container mt-5">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2>Dylon Montell Angol</h2>
+                <h2>Dylon Angol</h2>
             </div>
         </div>
     </section>
@@ -99,18 +99,20 @@
         <p>&copy; 2024 My Portfolio. All rights reserved.</p>
     </footer>
 
+    <!-- jQuery via CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap JS, Popper.js, and jQuery via CDN -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
             $("#contact-link").click(function(e){
                 e.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $("#contact").offset().top
-                }, 1000);
-                $("#contact").slideDown();
+                $("#contact").slideDown("slow", function() {
+                    $('html, body').animate({
+                        scrollTop: $("#contact").offset().top
+                    }, 1000);
+                });
             });
         });
     </script>
