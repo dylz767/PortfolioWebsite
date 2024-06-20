@@ -38,6 +38,13 @@ h2 {
     text-align: center;
 }
 
+#contact {
+    display: none;
+}
+.navbar {
+    transition: top 0.3s;
+}
+
 .card {
     margin-top: 20px;
     color: #555; /* Subtle color for card text */
