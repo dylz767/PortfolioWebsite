@@ -149,47 +149,47 @@
             </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container mt-5 mb-5">
-        <h2>Contact Me</h2>
-        <form action="/submit-form" method="post">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="container mt-5 mb-5">
+    <h2>Contact Me</h2>
+    <form action="/submit-form" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-light text-center py-3">
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer class="bg-light text-center py-3">
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+</footer>
 
-    <!-- jQuery via CDN -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- Bootstrap JS, Popper.js, and jQuery via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#contact-link").click(function(e){
-                e.preventDefault();
-                $("#contact").slideDown("slow", function() {
-                    $('html, body').animate({
-                        scrollTop: $("#contact").offset().top
-                    }, 1000);
-                });
+<!-- jQuery via CDN -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Bootstrap JS, Popper.js, and jQuery via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#contact-link").click(function(e){
+            e.preventDefault();
+            $("#contact").slideDown("slow", function() {
+                $('html, body').animate({
+                    scrollTop: $("#contact").offset().top
+                }, 1000);
             });
         });
-    </script>
+    });
+</script>
 </body>
 </html>
