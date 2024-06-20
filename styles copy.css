@@ -4,7 +4,12 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #555; /* Softer color for subtle text */
 }
-
+#contact {
+    display: none;
+}
+.navbar {
+    transition: top 0.3s;
+}
 h2 {
     margin-top: 30px;
     margin-bottom: 20px;
