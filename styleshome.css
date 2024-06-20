@@ -37,7 +37,18 @@ h2 {
 #about {
     text-align: center;
 }
-
+.card-img-top {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 200px; /* Adjust the height as needed */
+    object-fit: contain;
+    background-color: #ffffff; /* Background color to create letterbox effect */
+    padding: 10px; /* Adjust the padding to create margins */
+}
+#navbar {
+    transition: top 0.3s;
+}
 #contact {
     display: none;
 }
