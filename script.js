@@ -21,3 +21,9 @@ function sendMail() {
             alert('There was an error sending your message. Please try again later.');
         });
 }
+type="text/javascript">
+        (function(){
+        emailjs.init({
+        publicKey: "RBcd2ejmx76mxBox4",
+        });
+    })();
