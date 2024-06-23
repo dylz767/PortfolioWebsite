@@ -179,7 +179,6 @@
     </form>
 </section>
 
-
 <!-- Image Modal -->
 <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -228,6 +227,13 @@
                     scrollTop: $("#contact").offset().top
                 }, 1000);
             });
+        });
+
+        // Image click event to show modal
+        $(".img-enlarge").click(function() {
+            var src = $(this).attr('src');
+            $("#modalImage").attr('src', src);
+            $("#imageModal").modal('show');
         });
     });
 
