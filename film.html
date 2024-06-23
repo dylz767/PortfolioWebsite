@@ -133,7 +133,6 @@
     </div>
     </section>
  
-   
     <!-- Contact Section -->
     <section id="contact" class="container mt-5 mb-5">
         <h2>Contact Me</h2>
@@ -150,12 +149,12 @@
             <div class="form-group">
                 <textarea class="form-control" placeholder="Message" id="message" name="message" rows="5" required></textarea>
             </div>
-            <button type="button" class="btn btn-primary" onclick="sendMail()">Send</button>
-</form>
+            <button type="button" class="btn btn-primary" onclick="validateAndSend()">Send</button>
+        </form>
     </section>
-
-  <!-- Footer -->
-  <footer class="bg-light text-center py-3">
+    
+ <!-- Footer -->
+ <footer class="bg-light text-center py-3">
     <p>&copy; 2024 My Portfolio. All rights reserved.</p>
 </footer>
 <script src="script.js"></script>
@@ -188,7 +187,19 @@
             });
         });
     });
+
+    function validateAndSend() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+
+        if (name === "" || email === "" || subject === "" || message === "") {
+            alert("All fields are required!");
+        } else {
+            sendMail();
+        }
+    }
 </script>
 </body>
 </html>
-
