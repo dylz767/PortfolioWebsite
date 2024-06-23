@@ -52,6 +52,23 @@ h2 {
 #contact {
     display: none;
 }
+
+/* Center the button and adjust its style */
+#contactForm .btn-primary {
+    width: 100%; /* Full width button */
+    margin-top: 20px; /* Space between form and button */
+    background-color: #ffaa7cde; /* Fallback color */
+    border-color: #ffaa7cde; /* Fallback border color */
+    background-image: linear-gradient(to right, #ff9a7c, #ffd57c, #9d71ee); /* Gradient background */
+    color: #ffffffd5; /* Text color */
+}
+
+/* Hover effect for button */
+#contactForm .btn-primary:hover {
+    background-image: linear-gradient(to right, #ff725c, #ffc175, #9d71ee); /* Gradient background on hover */
+    color: #528e5e; /* Text color on hover */
+}
+
 .navbar {
     transition: top 0.3s;
 }
