@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styleshome.css">
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
         emailjs.init({
@@ -19,6 +17,16 @@
         });
     })();
     </script>
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -49,27 +57,84 @@
     <section id="projects" class="container mt-5">
         <h2>Projects</h2>
         <div class="row">
+            <!-- Gaffer Work -->
             <div class="col-md-4">
                 <div class="card">
-                    <a href="gaffer.html"><img src="img/image1.jpg" class="card-img-top"></a>
+                    <div id="gafferCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="gaffer.html"><img src="img/image1.jpg" class="d-block w-100" alt="Gaffer Work 1"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="gaffer.html"><img src="img/image2.jpg" class="d-block w-100" alt="Gaffer Work 2"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="gaffer.html"><img src="img/image3.jpg" class="d-block w-100" alt="Gaffer Work 3"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="gaffer.html"><img src="img/image4.jpg" class="d-block w-100" alt="Gaffer Work 4"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="gaffer.html"><img src="img/image5.jpg" class="d-block w-100" alt="Gaffer Work 5"></a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Gaffer Work</h5>
                         <p class="card-text">Personal favourites</p>
                     </div>
                 </div>
             </div>
+            <!-- Photography Work -->
             <div class="col-md-4">
                 <div class="card">
-                    <a href="photography.html"><img src="img/photo2.jpg" class="card-img-top"></a>
+                    <div id="photographyCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="photography.html"><img src="img/photo1.jpg" class="d-block w-100" alt="Photography Work 1"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="photography.html"><img src="img/photo2.jpg" class="d-block w-100" alt="Photography Work 2"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="photography.html"><img src="img/photo3.jpg" class="d-block w-100" alt="Photography Work 3"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="photography.html"><img src="img/photo4.jpg" class="d-block w-100" alt="Photography Work 4"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="photography.html"><img src="img/photo5.jpg" class="d-block w-100" alt="Photography Work 5"></a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Photography Work</h5>
                         <p class="card-text">Digital and film</p>
                     </div>
                 </div>
             </div>
+            <!-- Film Work -->
             <div class="col-md-4">
                 <div class="card">
-                    <a href="film.html"><img src="img/vid1.jpg" class="card-img-top"></a>
+                    <div id="filmCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="film.html"><img src="img/vid1.jpg" class="d-block w-100" alt="Film Work 1"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="film.html"><img src="img/vid2.jpg" class="d-block w-100" alt="Film Work 2"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="film.html"><img src="img/vid3.jpg" class="d-block w-100" alt="Film Work 3"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="film.html"><img src="img/vid4.jpg" class="d-block w-100" alt="Film Work 4"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="film.html"><img src="img/vid5.jpg" class="d-block w-100" alt="Film Work 5"></a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Film Work</h5>
                         <p class="card-text">Directed or Dp'd</p>
@@ -79,7 +144,6 @@
         </div>
     </section>
 
-  
     <!-- Contact Section -->
     <section id="contact" class="container mt-5 mb-5">
         <h2>Contact Me</h2>
@@ -110,43 +174,5 @@
     <!-- Bootstrap JS, Popper.js, and jQuery via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            var lastScrollTop = 0;
-            $(window).scroll(function(event){
-                var st = $(this).scrollTop();
-                if (st > lastScrollTop){
-                    // downscroll code
-                    $("#navbar").css("top", "-100px");
-                } else {
-                    // upscroll code
-                    $("#navbar").css("top", "0");
-                }
-                lastScrollTop = st;
-            });
-
-            $("#contact-link").click(function(e){
-                e.preventDefault();
-                $("#contact").slideDown("slow", function() {
-                    $('html, body').animate({
-                        scrollTop: $("#contact").offset().top
-                    }, 1000);
-                });
-            });
-        });
-
-        function validateAndSend() {
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var subject = document.getElementById('subject').value;
-            var message = document.getElementById('message').value;
-
-            if (name === "" || email === "" || subject === "" || message === "") {
-                alert("All fields are required!");
-            } else {
-                sendMail();
-            }
-        }
-    </script>
 </body>
 </html>
