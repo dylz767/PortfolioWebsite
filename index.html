@@ -174,5 +174,43 @@
     <!-- Bootstrap JS, Popper.js, and jQuery via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var lastScrollTop = 0;
+            $(window).scroll(function(event){
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                    // downscroll code
+                    $("#navbar").css("top", "-100px");
+                } else {
+                    // upscroll code
+                    $("#navbar").css("top", "0");
+                }
+                lastScrollTop = st;
+            });
+
+            $("#contact-link").click(function(e){
+                e.preventDefault();
+                $("#contact").slideDown("slow", function() {
+                    $('html, body').animate({
+                        scrollTop: $("#contact").offset().top
+                    }, 1000);
+                });
+            });
+        });
+
+        function validateAndSend() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || subject === "" || message === "") {
+                alert("All fields are required!");
+            } else {
+                sendMail();
+            }
+        }
+    </script>
 </body>
 </html>
